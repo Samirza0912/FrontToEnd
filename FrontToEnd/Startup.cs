@@ -28,12 +28,13 @@ namespace FrontToEnd
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     "default",
-                    "{controller=home}/{action=index}/{id?}"
+                    "{controller=home}/{action=index }/{id?}"
                     );
             });
         }

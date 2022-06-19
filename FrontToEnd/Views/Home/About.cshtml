@@ -1,0 +1,11 @@
+﻿@*<p>Header</p>*@
+@{  ViewData["Title"] = "About";
+    @*Layout = "_Layout";*@
+}
+<h1>About</h1>
+<ul>
+    <li>@ViewBag.Name</li>
+    <li>@ViewData["Surname"]</li>
+    <li>@TempData["Age"]</li>
+</ul>
+@*<p>footer</p>*@
