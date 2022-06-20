@@ -1,5 +1,6 @@
-﻿
-@model List<Student>;
+﻿//@using FrontToEnd.Models//
+@using FrontToEnd.ViewModels;
+@model HomeVM
 @*<p>Header</p>*@
 @{
     ViewData["Title"] = "Index";
@@ -7,17 +8,30 @@
 }
 <h1>Index</h1>
 @*<ul>
-    <li>@ViewBag.Name</li>
-    <li>@ViewData["Surname"]</li>
-    <li>@TempData["Age"]</li>
-</ul>*@
+        <li>@ViewBag.Name</li>
+        <li>@ViewData["Surname"]</li>
+        <li>@TempData["Age"]</li>
+    </ul>*@
 
 <hr />
 
 @*<ul>
-    @foreach (var item in ViewBag.Students)
-    {
-        <li>@item.Id @item.Name @item.Surname</li>
-    }
-</ul>*@
+        @foreach (var item in ViewBag.Students)
+        {
+            <li>@item.Id @item.Name @item.Surname</li>
+        }
+    </ul>*@
 @*<p>footer</p>*@
+
+<ul>
+    @foreach (var item in Model.Students)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
+<ul>
+    @foreach (var item in Model.Groups)
+    {
+        <li>@item.Name</li>
+    }
+</ul>

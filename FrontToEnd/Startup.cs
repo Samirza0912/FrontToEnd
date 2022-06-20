@@ -34,7 +34,7 @@ namespace FrontToEnd
             {
                 endpoints.MapControllerRoute(
                     "default",
-                    "{controller=home}/{action=index }/{id?}"
+                    "{controller=home}/{action=index}/{id?}"
                     );
             });
         }
